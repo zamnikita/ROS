@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "standart_model_server");
 	ros::NodeHandle n;
 	
-	ros::ServiceServer lab2_service = n.advertiseService("get_description_server",get_description);
+	ros::ServiceServer lab2_service = n.advertiseService("get_description",get_description);
 	
 	ROS_INFO("Ready to give description of Elementary Particle");
 	ros::spin();

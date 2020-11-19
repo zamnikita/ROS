@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 	
 	ros::init(argc, argv, "standart_model_client");
 	ros::NodeHandle n;
-	ros::ServiceClient lab2_client = n.serviceClient<lab2_zamorin::GetDescription>("get_description_client");
+	ros::ServiceClient lab2_client = n.serviceClient<lab2_zamorin::GetDescription>("get_description");
 	lab2_zamorin::GetDescription srv;
 	ros::Rate loop_rate(1);
 	srand(static_cast<unsigned int>(time(0)));
