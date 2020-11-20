@@ -8,7 +8,7 @@ using namespace std;
 bool get_description(lab2_zamorin::GetDescription::Request &req, lab2_zamorin::GetDescription::Response &res)
 {
 	
-	if (((req.row > 4) && (req.column > 5)) || ((req.row > 1) && (req.column > 4)) || (req.row < 1) || (req.column < 1))   {
+	if ((req.row > 4) || (req.column > 5) || ((req.row > 1) && (req.column > 4)) || (req.row < 1) || (req.column < 1))   {
 		ROS_INFO_STREAM("no element");
 		res.answer = "no element";
 	}
